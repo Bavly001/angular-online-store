@@ -1,0 +1,79 @@
+.top,
+.category-title {
+  z-index: 1;
+}
+.category {
+  height: 50vh !important;
+  width: 50vh !important;
+  transition: all 0.5s;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.category:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.category.lighting {
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/illuminated-pendant-lights-hanging-from-ceiling-royalty-free-image-1576719488.jpg");
+}
+.category.motorcycle {
+  background-image: url("https://i.pinimg.com/originals/a1/58/b9/a158b938cea6827011583159d6c0faab.jpg");
+}
+.category.automotive {
+  background-image: url("https://www.spare-parts-trade.com/img/home/Automotive_Spares_Turbocharger_Injection-pumps.jpg");
+}
+.category.sunglasses {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6d070031918307.5666c73cbbf3a.jpg");
+}
+.category.womens-jewellery {
+  background-image: url("https://sc04.alicdn.com/kf/Hf66eeb36bf694a348c83aaa1702aa597T.jpg");
+}
+.category.womens-bags {
+  background-image: url("https://www.truefacet.com/guide/wp-content/uploads/2021/04/Hermes-handbag-luxury-05-jun-dang-commercial-photographer-1.jpg");
+}
+.category.womens-watches {
+  background-image: url("https://images.unsplash.com/photo-1580226223521-5412ec88237a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tZW5zJTIwd2F0Y2h8ZW58MHx8MHx8&w=1000&q=80");
+}
+.category.mens-watches {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5dad7b596fa86b0710a48be7/1614519430370-9BS8GFK8ZZFMFM0M16E9/1+diff+rechts.jpg");
+}
+.category.mens-shoes {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5b82aef4697a98a304da16dc/1548532352721-RCHX6WWYHYXOKKX6EOQH/DD-0119-1-loafer.jpg?format=2500w");
+}
+.category.womens-shoes {
+  background-image: url("https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4lMjBzaG9lc3xlbnwwfHwwfHw%3D&w=1000&q=80");
+}
+.category.womens-dresses {
+  background-image: url("https://i.etsystatic.com/7799304/r/il/f24aef/2105739985/il_fullxfull.2105739985_1bc7.jpg");
+}
+.category.mens-shirts {
+  background-image: url("https://productpictips.com/wp-content/uploads/2019/12/Canva-Men-shirts-1200x900.jpg");
+}
+.category.tops {
+  background-image: url("https://www.dmarge.com/wp-content/uploads/2022/08/dmarge-James-Perse-best-polo-shirts-men-920x920.jpg");
+}
+.category.furniture {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/59da11e98419c28f51bab499/1582262418163-01LF422TAMYXG4FFR3O2/studio-furniture-photography-IJProductions_1.jpg?format=1000w");
+}
+.category.home-decoration {
+  background-image: url("https://stylecurator.com.au/wp-content/uploads/2020/08/Bookshelf-dried-floral-arrangement.jpg");
+}
+.category.groceries {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5432e8d7e4b0fd126503b83b/1615319142913-0SBTAS2LD139E74RTSH1/food+product+packshot+photography.jpg?format=1000w");
+}
+.category.skincare {
+  background-image: url("https://ecommercephotographyindia.com/info/wp-content/uploads/2022/02/Skincare-product-photography-768x1024.jpeg");
+}
+.category.fragrances {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5aa7182a1aef1d773b69638c/1559917205508-ZRZEZF7XODWBN29T5H7V/Kevin+Norris+Photography_Fragrance-2.jpg?format=2500w");
+}
+.category.laptops {
+  background-image: url("https://www.dpreview.com/files/p/articles/6096287211/DLCS1672-Edit.jpeg");
+}
+.category.smartphones {
+  background-image: url("https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2022/04/New-year-new-phone-Top-5-smartphones-to-launch-in-2022-scaled.jpg?fit=2560%2C1440&ssl=1");
+}
+.z-index{
+  z-index: 100;
+}

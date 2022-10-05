@@ -1,0 +1,65 @@
+<app-header bgColor="bg-navy" textColor="text-beige"></app-header>
+<div class="w-100 min-vh-100 bg-beige position-relative">
+  <div class="w-100 vh-50 d-flex justify-content-center align-items-center text-navy top-section position-relative">
+    <div class="position-absolute w-100 h-100 bg-beige opacity-75"></div>
+    <div class="position-absolute w-100 h-100 bg-beige opacity-50"></div>
+    <h1 class="display-4 me-5 z-index">All your need are in </h1>
+    <app-logo [size]="25" [bgColor]="'navy'"></app-logo>
+  </div>
+  <div class="w-100 bg-navy position-sticky top-0 px-4 position-relative z-index">
+    <div
+      class="h-100 px-2 bg-navy d-flex justify-content-center align-items-center text-beige position-absolute top-0 start-0">
+      <mat-icon class="ps-2">arrow_back_ios</mat-icon>
+    </div>
+    <div class="w-100 sub-header">
+      <h1 class="d-inline-block fs-6 m-4 text-uppercase cursor-pointer" *ngFor="let category of productsCategories"
+        (click)="changeLocation(category)" [ngClass]="category === product ? ' text-orange ' : ' text-beige '">
+        {{category}} </h1>
+    </div>
+    <div
+      class="h-100 px-2 bg-navy d-flex justify-content-center align-items-center text-beige position-absolute top-0 end-0">
+      <mat-icon class="pe-2">arrow_forward_ios</mat-icon>
+    </div>
+
+  </div>
+  <div class="container py-5">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-start align-items-center gy-5">
+      <div
+        *ngFor="let product of productsData | paginate:{itemsPerPage: pageSize, currentPage:page ,totalItems:productsData.length} let i = index"
+        class="col text-navy text-decoration-none d-flex justify-content-center align-content-center ">
+        <div [routerLink]="['/product/'+product.id]"
+          class="border border-1 rounded-3 product d-flex align-items-center flex-column p-3 d-flex justify-content-center align-items-center hover-shadow cursor-pointer">
+          <div class="w-75">
+            <div class="d-flex justify-content-center align-items-center overflow-hidden bg-beige thumbnail rounded-3">
+              <img class="h-100 rounded-3" src={{product.thumbnail}}>
+            </div>
+            <h1 class="display-6 fs-4 mt-3 mb-0 text-truncate">
+              {{ product.title}}
+            </h1>
+            <h1 class="display-6 fs-6 text-orange text-truncate">
+              {{ product.description}}
+            </h1>
+            <h1 class="display-6 fs-6 text-navy text-truncate">
+              {{ product.category}}
+            </h1>
+            <h1 class="display-6 fs-6 text-navy text-truncate d-flex">
+              <mat-icon class="fs-5 text-orange">star</mat-icon>
+              {{ product.rating}}
+            </h1>
+            <h1 class="display-6 fs-2 mt-3 mb-0 ">
+              {{ product.price}}<sup class="ms-1 fs-6 text-orange">EGP</sup>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 d-flex justify-content-center align-items-center py-5 flex-column">
+      <pagination-controls previousLabel="" nextLabel="" (pageChange)="onPageChange($event)"></pagination-controls>
+      <h1 (click)="changeLocation('all')" *ngIf="!all"
+        class="d-flex justify-content-center align-items-center display-6 fs-6 text-orange cursor-pointer">
+        View All Products<mat-icon>arrow_right_alt</mat-icon>
+      </h1>
+    </div>
+
+  </div>
+</div>
