@@ -1,5 +1,6 @@
 /* Global Styles */
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
 ::-webkit-scrollbar {
   display: none;
 }
