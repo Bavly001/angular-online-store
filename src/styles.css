@@ -12,11 +12,8 @@
   --orange-color: #fb8500;
 }
 .dark {
-  --cyan-color: #30bced;
   --navy-color: #faf2ef;
   --beige-color: #023047;
-  --yellow-color: #ffb703;
-  --orange-color: #fb8500;
 }
 .text-cyan {
   color: var(--cyan-color) !important;
