@@ -1,0 +1,12 @@
+.frame {
+  height: 40vh;
+  width: 40vh;
+}
+.hover {
+  transition: all 0.5s;
+}
+.hover:hover {
+  z-index: 11;
+  transform: scale(1.2);
+  text-decoration: underline;
+}

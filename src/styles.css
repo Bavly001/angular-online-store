@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --cyan-color: #30bced;
+  --beige-color: #faf2ef;
+  --navy-color: #023047;
+  --yellow-color: #ffb703;
+  --orange-color: #fb8500;
+}
+.dark {
+  --cyan-color: #30bced;
+  --navy-color: #faf2ef;
+  --beige-color: #023047;
+  --yellow-color: #ffb703;
+  --orange-color: #fb8500;
+}
+.text-cyan {
+  color: var(--cyan-color) !important;
+}
+.text-navy {
+  color: var(--navy-color) !important;
+}
+.text-yellow {
+  color: var(--yellow-color) !important;
+}
+.text-orange {
+  color: var(--orange-color) !important;
+}
+.text-orange.cursor-pointer:hover {
+  color: var(--yellow-color) !important;
+}
+.text-beige {
+  color: var(--beige-color) !important;
+}
+.text-beige.cursor-pointer:hover {
+  color: var(--cyan-color) !important;
+}
+.bg-cyan {
+  background-color: var(--cyan-color) !important;
+}
+.bg-navy {
+  background-color: var(--navy-color) !important;
+}
+.bg-yellow {
+  background-color: var(--yellow-color) !important;
+}
+.bg-orange {
+  background-color: var(--orange-color) !important;
+}
+.bg-beige {
+  background-color: var(--beige-color) !important;
+}
+.top-90 {
+  top: 90% !important;
+}
+.btn.bg-navy:hover {
+  background-color: var(--cyan-color) !important;
+}
+.btn.bg-orange:hover {
+  background-color: var(--yellow-color) !important;
+}
+.vh-50 {
+  height: 50vh !important;
+}
+.border {
+  border-color: var(--navy-color) !important;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.cursor-pointer {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.hover-shadow:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 5px !important;
+}

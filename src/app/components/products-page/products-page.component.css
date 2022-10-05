@@ -1,0 +1,20 @@
+.top-section{
+      background: url('https://d1tm14lrsghf7q.cloudfront.net/media/files/rtf/2019_07_FRAME/Labotory_291_Photographs-01.jpg') no-repeat center;
+      background-size: cover;
+}
+.z-index{
+      z-index: 11;
+}
+.sub-header{
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+}
+.product{
+      height: 60vh;
+      width: 40vh;
+}
+.thumbnail{
+      height: 30vh;
+      width: 25vh;
+}

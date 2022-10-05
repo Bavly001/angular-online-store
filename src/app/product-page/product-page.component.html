@@ -1,0 +1,69 @@
+<div class="w-100 min-vh-100 bg-beige text-navy">
+  <div class="container p-5">
+    <div class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 justify-content-center align-items-center g-md-3 g-sm-1">
+      <div class="col d-flex justify-content-start align-items-center">
+        <div class="h-100 w-75 overflow-hidden d-flex justify-content-start align-items-center rounded-3">
+          <img class="rounded-3 h-100" src={{product.thumbnail}}>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-start align-items-start flex-column">
+        <h1 class="display-2">{{product.title}}</h1>
+        <h1 class="display-6 text-orange fs-2">Description: {{product.description}}</h1>
+        <h1 class="display-6 fs-4">Category: {{product.category}}</h1>
+      </div>
+    </div>
+    <div
+      class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 justify-content-center align-items-center g-md-3 g-sm-1 mt-3">
+      <div class="col d-flex justify-content-start align-items-start flex-column">
+        <h1 class="display-4 d-flex justify-content-center align-items-center">Price: {{product.price}} <sup
+            class="ms-1 fs-3 text-orange ">EGP</sup></h1>
+        <h1 class="display-6 fs-3 d-flex justify-content-center align-items-center">Rate: {{product.rating}}
+          <mat-icon class="text-orange">star</mat-icon>
+        </h1>
+      </div>
+      <div class="col d-flex justify-content-start align-items-start flex-column">
+        <h1 class="display-6 text-orange d-flex justify-content-center align-items-center">Brand: {{product.brand}}
+        </h1>
+        <h1 class="display-6">Stock: {{product.stock}}</h1>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center flex-column my-5">
+      <h1 (click)="showImages()" *ngIf="product.images.length>0"
+        class="display-6 fs-5 d-flex justify-content-center align-items-center text-orange cursor-pointer">Show more
+        images <mat-icon *ngIf="!show">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="show">keyboard_arrow_up</mat-icon>
+      </h1>
+      <div *ngIf="show"
+        class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 justify-content-start align-items-center g-lg-4 g-md-3 g-sm-2 mt-5">
+        <div *ngFor="let image of product.images" class="col">
+          <div
+            class="bg-beige frame hover hover-shadow overflow-hidden d-flex justify-content-center align-items-center w-100">
+            <img src={{image}} class="h-100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 text-navy border-3 border-top py-5 mt-5">
+      <h1 class="display-4">
+        Our recommendations for you
+      </h1>
+      <div
+        class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 justify-content-start align-items-center g-lg-4 g-md-3 g-sm-2 mt-5">
+        <div *ngFor="let oneProduct of randomProducts"
+          class="bg-beige col border-1 d-flex justify-content-center align-items-center flex-column hover">
+          <div (click)="changeLocation(oneProduct.id)"
+            class="frame overflow-hidden d-flex hover-shadow justify-content-center align-items-center w-100">
+            <img src={{oneProduct.thumbnail}} class="h-100">
+          </div>
+          <h1 class="display-6 fs-6">{{oneProduct.title}}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 d-flex justify-content-center align-items-center py-2 flex-column">
+      <h1 [routerLink]="'/products'"
+        class="d-flex justify-content-center align-items-center display-6 fs-6 text-orange cursor-pointer">
+        Back to menu<mat-icon>arrow_right_alt</mat-icon>
+      </h1>
+    </div>
+  </div>
+</div>

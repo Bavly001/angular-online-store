@@ -1,0 +1,17 @@
+<header [ngClass]="[bgColor, textColor]">
+  <div class="w-100 d-flex justify-content-center align-items-center py-2">
+    <div class="w-100 row justify-content-center align-items-center">
+      <div class="col col-6 d-flex justify-content-center align-items-center">
+        <app-logo [bgColor]="'beige'" [size]="8" routerLink="/" class="cursor-pointer"></app-logo>
+      </div>
+      <div class="col-5 d-flex justify-content-around align-items-center">
+        <h1 routerLink="/" class="display-6 fs-6 cursor-pointer" [ngClass]="[active === 'home' ? 'text-orange' : '']">
+          Home</h1>
+        <h1 routerLink="/products" class="display-6 fs-6 cursor-pointer"
+          [ngClass]="[active.includes('products') ? 'text-orange':'']">Products
+        </h1>
+        <!-- <button class="btn bg-orange" [ngClass]='textColor'>Login</button> -->
+      </div>
+    </div>
+  </div>
+</header>

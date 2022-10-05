@@ -1,0 +1,43 @@
+<div class="w-100 min-vh-100 bg-beige">
+  <div class="w-100 vh-100 bg-black overflow-hidden position-relative d-flex justify-content-center align-items-center">
+    <img
+      src="https://static.vecteezy.com/system/resources/previews/002/984/598/large_2x/abstract-blur-and-defocused-supermarket-for-background-free-photo.jpg"
+      alt="store" class="w-100 market-img opacity-25 position-absolute top-0 start-0">
+    <div class="bg-navy w-100 h-100 market-img opacity-25 position-absolute top-0 start-0"></div>
+    <div class="container top">
+      <div class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 justify-content-center align-items-center gy-sm-2">
+
+        <div class="col d-flex justify-content-center align-items-center flex-column text-center">
+          <h1 class="display-6 text-orange">Stop wasting your time</h1>
+          <h1 class="display-3 text-beige">All your needs now are in one place</h1>
+          <a [routerLink]="['/products/all']" class="btn btn-lg bg-orange text-beige shadow my-5 rounded-4">Discover our
+            items </a>
+        </div>
+
+        <div class="col d-flex justify-content-center align-items-center flex-column">
+          <app-logo [size]="40" [bgColor]="bgColor"></app-logo>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <app-header bgColor="bg-navy" textColor="text-beige" class="position-sticky top-0 z-index"></app-header>
+  <div class="container py-5 text-beige" id="#categories">
+    <h1 class="mb-5 display-3 text-navy text-center">Our Products</h1>
+    <div class="row row-cols-lg-3 justify-content-start align-items-center gy-lg-5 gy-md-3 gy-sm-1 w-100">
+      <a [routerLink]="['/products', category]"
+        class="col text-decoration-none text-beige d-flex justify-content-center align-items-center"
+        *ngFor="let category of categories">
+        <div class="category d-flex justify-content-center align-items-center position-relative" [ngClass]="category">
+          <div class="position-absolute w-100 h-100 bg-navy opacity-75"></div>
+          <h1 class="display-6 fs-4 fw-bold text-uppercase category-title">
+            {{ category }}
+          </h1>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+<app-footer [bgColor]="'bg-navy'" [textColor]="'text-beige'"></app-footer>
